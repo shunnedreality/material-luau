@@ -1,0 +1,13 @@
+{
+    "name": "MaterialRoblox",
+    "tree": {
+      "$className": "Folder",
+      "Packages": {
+        "$path": "Packages",
+        "MaterialRoblox": {
+          "$path": "src"
+        }
+      }
+    }
+  }
+  

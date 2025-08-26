@@ -1,3 +1,12 @@
-Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
+# MaterialRoblox
 
-Learn more at https://developers.google.com/idx/guides/customize-idx-env
+[Information](https://devforum.roblox.com/t/materialroblox-fusion-material-design-3-components-that-actually-look-and-work-like-from-google/3895990) |
+[Docs](https://shunnedreality.github.io/material-roblox)
+
+## Tokens
+
+MaterialRoblox ensures that it is up to Material Design 3 specs by using actual Token values.
+
+## Theming
+
+MaterialRoblox allows you to fully customize your Material Design 3 colors and typography using actual JS code from Google.

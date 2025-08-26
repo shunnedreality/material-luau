@@ -1,0 +1,37 @@
+name: Create release
+run-name: Releasing material-roblox
+on:
+ push:
+  tags:
+   - 'v*'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - uses: ok-nick/setup-aftman@v0.3.0
+      name: Install aftman
+      with:
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+    - name: Build
+      run: |
+        aftman install
+        wally install
+        rojo build -o build.rbxm
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release and Upload Artifacts
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            New release, check docs
+          artifacts: "build.rbxm"
+          token: ${{ secrets.GITHUB_TOKEN }}
