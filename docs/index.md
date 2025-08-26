@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# MaterialRoblox v0.8
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+MaterialRoblox is a Fusion Material Design 3 UI library that actually looks and functions like from Google.
 
-## Commands
+**Works with:** Fusion 0.3, only
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Features
 
-## Project layout
+### Tokens
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+MaterialRoblox ensures that it is up to Material Design 3 specs by using actual Token values.
+
+### Theming
+
+MaterialRoblox allows you to fully customize your Material Design 3 colors and typography using actual JS code from Google.

@@ -1,4 +1,17 @@
 site_name: My Docs
 site_url: https://shunnedreality.github.io/material-roblox
+repo_name: shunnedreality/material-roblox
+repo_url: https://github.com/shunnedreality/material-roblox
 theme:
   name: material
+nav:
+  - Home: index.md
+  - Quickstart: Quickstart/index.md
+  - Components:
+      Components/Dialog.md
+      Components/Icon.md
+      Components/NavigationBar.md
+      Components/NavigationTab.md
+      Components/Ripple.md
+      Components/Tabs.md
+      Components/TabItem.md
