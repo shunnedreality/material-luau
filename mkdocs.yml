@@ -19,7 +19,7 @@ nav:
       - Components/NavigationBar.md
       - Components/NavigationTab.md
       - Components/Ripple.md
-      - Components/Tabs.mds
+      - Components/Tabs.md
       - Components/TabItem.md
       - Components/TextButton.md
   - Utils:
