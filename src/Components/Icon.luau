@@ -20,9 +20,9 @@ local function Icon(
 		Image = scope:Computed(function(
 			use: Fusion.Use
 		)
-			return Icons[use(props.icon)]
-				--[[[(props.fill or false) and "filled" or "outlined"]
-				[props.icon];]]
+			return Icons
+				[use(props.fill or false) and "filled" or "outlined"]
+				[props.icon];
 		end),
 		BackgroundTransparency = 1
 	}
