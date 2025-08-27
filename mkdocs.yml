@@ -6,12 +6,13 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Quickstart: Quickstart/index.md
+  - Quickstart: 
+      - Quickstart/index.md
   - Components:
-      Components/Dialog.md
-      Components/Icon.md
-      Components/NavigationBar.md
-      Components/NavigationTab.md
-      Components/Ripple.md
-      Components/Tabs.md
-      Components/TabItem.md
+      - Components/Dialog.md
+      - Components/Icon.md
+      - Components/NavigationBar.md
+      - Components/NavigationTab.md
+      - Components/Ripple.md
+      - Components/Tabs.md
+      - Components/TabItem.md
