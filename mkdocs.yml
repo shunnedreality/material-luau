@@ -21,3 +21,7 @@ nav:
       - Components/Ripple.md
       - Components/Tabs.md
       - Components/TabItem.md
+  - Utils:
+      - Utils/MaterialColorUtilities.md
+      - Utils/MaterialTypography.md
+      - Utils/ProvideMaterial.md
