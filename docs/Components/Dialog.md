@@ -1,5 +1,6 @@
-# `MaterialRoblox.Components.Dialog`
-### Dialogs provide important prompts in a user flow
+# Dialog
+Dialogs provide important prompts in a user flow
+
 [Material Design 3 Documentation](https://m3.material.io/components/dialogs)
 
 ![Dialog example](https://firebasestorage.googleapis.com/v0/b/design-spec/o/projects%2Fgoogle-material-3%2Fimages%2Fm8sfcqhr-03_do.png?alt=media&token=3655fc78-54b9-44f6-a239-d93670bb087e)

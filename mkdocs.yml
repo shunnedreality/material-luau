@@ -4,10 +4,14 @@ repo_name: shunnedreality/material-roblox
 repo_url: https://github.com/shunnedreality/material-roblox
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.top
 nav:
   - Home: index.md
-  - Quickstart: 
-      - Quickstart/index.md
+  - Quickstart: Quickstart.md
   - Components:
       - Components/Dialog.md
       - Components/Icon.md

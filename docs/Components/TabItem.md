@@ -1,4 +1,4 @@
-# `MaterialRoblox.Components.TabItem`
+# Tab Item
 
 More information available at: [NavigationBar]("https://shunnedreality.github.io/material-roblox/components/tabs")
 
