@@ -9,6 +9,7 @@ theme:
     - navigation.instant.progress
     - navigation.tabs
     - navigation.top
+    - navigation.indexes
 nav:
   - Home: index.md
   - Quickstart: Quickstart.md
