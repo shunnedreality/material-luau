@@ -31,6 +31,12 @@ local function NavigationTab(
 	
 	state.incrementalIndex += 1;
 
+	local isActive = scope:Computed(function(
+		use: Fusion.Use
+	)
+		return use(activeIndex) == thisIndex
+	end)
+
 	return scope:New("ImageButton") {
 		BackgroundTransparency = 1,
 		Size = UDim2.fromScale(0, 1);
@@ -51,7 +57,7 @@ local function NavigationTab(
 					scope:Computed(function(
 						use: Fusion.Use
 					)
-						if use(activeIndex) == thisIndex then
+						if use(isActive) then
 							return 0
 						else
 							return 1
@@ -63,7 +69,7 @@ local function NavigationTab(
 					scope:Computed(function(
 						use: Fusion.Use
 					)
-						if use(activeIndex) == thisIndex then
+						if use(isActive) then
 							return UDim2.fromOffset(56, 32)
 						else
 							return UDim2.fromOffset(0, 32)
@@ -80,14 +86,15 @@ local function NavigationTab(
 					
 					scope:Hydrate(
 						Icon(scope, {
-							icon = props.icon
+							icon = props.icon,
+							fill = isActive
 						})
 					) {
 						ImageColor3 = scope:Tween(
 							scope:Computed(function(
 								use: Fusion.Use
 							)
-								if use(activeIndex) == thisIndex then
+								if use(isActive) then
 									return Tokens.activeIconColor
 								else
 									return Tokens.inactiveIconColor
@@ -109,7 +116,7 @@ local function NavigationTab(
 					scope:Computed(function(
 						use: Fusion.Use
 					)
-						if use(activeIndex) == thisIndex then
+						if use(isActive) then
 							return Tokens.activeLabelColor
 						else
 							return Tokens.inactiveLabelColor
