@@ -1,6 +1,6 @@
 # Installing MaterialRoblox
 
-Download MaterialRoblox from the Releases page on Github.
+Download MaterialRoblox from the [Releases page on Github](https://github.com/shunnedreality/material-roblox/releases).
 
 # Using MaterialRoblox
 
