@@ -19,8 +19,9 @@ nav:
       - Components/NavigationBar.md
       - Components/NavigationTab.md
       - Components/Ripple.md
-      - Components/Tabs.md
+      - Components/Tabs.mds
       - Components/TabItem.md
+      - Components/TextButton.md
   - Utils:
       - Utils/MaterialColorUtilities.md
       - Utils/MaterialTypography.md
