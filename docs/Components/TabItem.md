@@ -1,6 +1,6 @@
 # Tab Item
 
-More information available at: [NavigationBar]("https://shunnedreality.github.io/material-roblox/components/tabs")
+More information available at: [Tabs]("https://shunnedreality.github.io/material-roblox/components/tabs")
 
 ## API
 ```typescript
