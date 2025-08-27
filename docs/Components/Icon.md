@@ -9,7 +9,7 @@
 Icon(
     scope: Fusion.Scope,
 	props: {
-		icon: string,
+		icon: Fusion.UsedAs<string>,
 		fill: Fusion.UsedAs<boolean>?
 	}
 )
