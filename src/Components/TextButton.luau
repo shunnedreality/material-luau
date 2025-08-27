@@ -33,7 +33,7 @@ local function TextButton(
 	props: {
 		onClick: () -> ()?,
 		text: Fusion.UsedAs<string>,
-		variant: Fusion.UsedAs<"tonal" | "outlined" | "filled" | "text">,
+		variant: Fusion.UsedAs<"tonal" | "outlined" | "filled" | "text">?,
 	}?
 )
 	local Tokens = TextButtonTokens();
