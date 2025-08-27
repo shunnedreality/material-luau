@@ -25,11 +25,17 @@ MaterialRoblox.Components.NavigationBar(scope, {
 		return {
 			MaterialRoblox.Components.NavigationTab(scope, {
 				label = "Home",
-				icon = "home"
+				icon = "home",
+				onActive = function()
+					...
+				end
 			}),
 			MaterialRoblox.Components.NavigationTab(scope, {
 				label = "Store",
-				icon = "shop"
+				icon = "shop",
+				onActive = function()
+					...
+				end
 			})
 		}
 	end,

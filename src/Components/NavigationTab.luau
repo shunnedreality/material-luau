@@ -18,7 +18,8 @@ local function NavigationTab(
 	scope: Fusion.Scope,
 	props: {
 		label: string,
-		icon: string
+		icon: string,
+		onActive: () -> ()?
 	}
 )
 	local Tokens = NavigationTabTokens();
@@ -44,6 +45,10 @@ local function NavigationTab(
 		
 		[OnEvent "MouseButton1Click"] = function()
 			activeIndex:set(thisIndex);
+
+			if props.onActive then
+				props.onActive();
+			end
 		end,
 		
 		[Children] = {

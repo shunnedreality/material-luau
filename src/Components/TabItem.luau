@@ -81,7 +81,8 @@ local function TabItem(
 	scope: Fusion.Scope,
 	props: {
 		label: string,
-		icon: string
+		icon: string,
+		onActive: () -> ()?
 	}
 )
 	local Tokens = TabsTokens();
@@ -126,7 +127,11 @@ local function TabItem(
 		[Out "AbsoluteSize"] = tabAbsoluteSize,
 
 		[OnEvent "MouseButton1Click"] = function()
-			setActiveTab(thisIndex, state)
+			setActiveTab(thisIndex, state);
+
+			if props.onActive then
+				props.onActive();
+			end
 		end,
 
 		[Children] = {

@@ -8,7 +8,8 @@ TabItem(
 	scope: Fusion.Scope,
 	props: {
 		label: string,
-		icon: string
+		icon: string,
+		onActive: () => ()?
 	}
 )
 ```
