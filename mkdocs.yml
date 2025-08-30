@@ -13,9 +13,6 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - admonition
-    - pymdownx.details
-    - pymdownx.superfences
 nav:
   - Home: index.md
   - Quickstart: Quickstart.md
@@ -28,7 +25,12 @@ nav:
       - Components/Tabs.md
       - Components/TabItem.md
       - Components/TextButton.md
+      - Components/Banner.md
   - Utils:
       - Utils/MaterialColorUtilities.md
       - Utils/MaterialTypography.md
       - Utils/ProvideMaterial.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
