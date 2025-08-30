@@ -128,12 +128,12 @@ local function startPressAnimation(
 	currentAnimation:set(TweenService:Create(
 		surface,
 		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Quint, 
-			Enum.EasingDirection.InOut),
+			Enum.EasingDirection.Out),
 		{
 			Size = UDim2.fromOffset(initialSize * scale, initialSize * scale),
 			Position = UDim2.fromScale(endPosition.X, endPosition.Y);
 		}
-		));
+	));
 
 	(scope.peek(currentAnimation) :: Tween):Play();
 end
