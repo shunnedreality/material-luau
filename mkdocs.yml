@@ -3,6 +3,9 @@ site_url: https://shunnedreality.github.io/material-roblox
 repo_name: shunnedreality/material-roblox
 repo_url: https://github.com/shunnedreality/material-roblox
 theme:
+  icon:
+    admonition:
+      note: octicons/tag-16
   name: material
   features:
     - navigation.instant
