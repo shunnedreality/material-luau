@@ -10,6 +10,9 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
 nav:
   - Home: index.md
   - Quickstart: Quickstart.md
