@@ -6,6 +6,7 @@ end
 
 local function FontBuilder(fontFamily: number)
 	local FontTheme = {
+		expressiveFont = makeFont(fontFamily, Enum.FontWeight.Bold),
 		display = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
