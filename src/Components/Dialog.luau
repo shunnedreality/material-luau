@@ -10,6 +10,7 @@ local TextButton = require(MaterialRoblox.Components.TextButton);
 local Fusion = require(MaterialRoblox.Parent.Fusion);
 local Display = require(MaterialRoblox.Utils.Display);
 local Fade = require(MaterialRoblox.Utils.Fade);
+local showComputed = require(MaterialRoblox.Utils.ShowComputed);
 
 local Children = Fusion.Children;
 local Out = Fusion.Out;
@@ -67,12 +68,22 @@ local function DialogElement(
 		),
 		
 		[Children] = {
+			showComputed(scope, props.open, function()
+				return scope:New("ImageButton") {
+					Modal = true,
+					Size = UDim2.fromScale(1, 1),
+					BackgroundTransparency = 1,
+					ImageTransparency = 1,
+				}
+			end),
+
 			scope:New("Frame") {
 				AnchorPoint = Vector2.new(.5, .5),
 				Position = UDim2.fromScale(.5, .5),
 				AutomaticSize = Enum.AutomaticSize.XY,
 				Size = UDim2.fromScale(0, 0),
 				BackgroundColor3 = Tokens.containerColor,
+				ZIndex = 2,
 
 				[Children] = {
 					scope:New("UICorner") {
