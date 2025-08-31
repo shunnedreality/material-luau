@@ -91,7 +91,7 @@ local function Switch(
                         end
                     end),
                     25,
-                    .9
+                    1
                 ),
                 BackgroundTransparency = scope:Computed(function(
                     use: Fusion.Use
@@ -124,7 +124,7 @@ local function Switch(
                                 end
                             end),
                             25,
-                            .9
+                            1
                         ),
                         BackgroundColor3 = scope:Computed(function(
                             use: Fusion.Use
