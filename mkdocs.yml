@@ -27,6 +27,8 @@ nav:
       - Components/TextButton.md
       - Components/Banner.md
       - Components/Switch.md
+      - Components/SideSheet.md
+      - Components/IconButton.md
   - Utils:
       - Utils/MaterialColorUtilities.md
       - Utils/MaterialTypography.md
