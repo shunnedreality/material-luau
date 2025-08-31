@@ -11,7 +11,7 @@ local function getTokens()
 	local theme = Theming:now();
 
 	return {
-		containerColor = theme.color.surface
+		containerColor = theme.color.surfaceContainer
 	}
 end
 
