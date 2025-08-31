@@ -8,31 +8,10 @@ local MaterialRoblox = script.Parent.Parent;
 local Fusion = require(MaterialRoblox.Parent.Fusion);
 local BannerTokens = require(MaterialRoblox.Tokens.Banner);
 local TextButton = require(MaterialRoblox.Components.TextButton);
+local showComputed = require(MaterialRoblox.Utils.ShowComputed);
 
 local Children = Fusion.Children;
 local Out = Fusion.Out;
-
-local function showComputed(
-	scope: Fusion.Scope,
-	value: Fusion.Value<any?>,
-	createObject: () -> Instance
-)
-	local object: nil | Instance;
-
-	return scope:Computed(function(
-		use: Fusion.Use
-	)
-		if use(value) then
-			if object then
-				return object
-			else
-				object = createObject();
-
-				return object;
-			end
-		end
-	end)
-end
 
 local function Banner(
 	scope: Fusion.Scope,
