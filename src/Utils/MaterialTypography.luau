@@ -10,71 +10,71 @@ local function FontBuilder(fontFamily: number)
 		display = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 57,
+				fontSize = 58,
 			},
 			medium = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 45,
+				fontSize = 46,
 			},
 			small = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 36,
+				fontSize = 37,
 			},
 		},
 		headline = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 32,
+				fontSize = 33,
 			},
 			medium = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 28,
+				fontSize = 29,
 			},
 			small = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 24,
+				fontSize = 25,
 			},
 		},
 		title = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 22,
+				fontSize = 23,
 			},
 			medium = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 16,
+				fontSize = 17,
 			},
 			small = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 14,
+				fontSize = 15,
 			},
 		},
 		label = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 14,
+				fontSize = 15,
 			},
 			medium = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 12,
+				fontSize = 13,
 			},
 			small = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 11,
+				fontSize = 12,
 			},
 		},
 		body = {
 			large = {
 				font = makeFont(fontFamily, Enum.FontWeight.Medium),
-				fontSize = 16,
+				fontSize = 17,
 			},
 			medium = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 14,
+				fontSize = 15,
 			},
 			small = {
 				font = makeFont(fontFamily, Enum.FontWeight.Regular),
-				fontSize = 12,
+				fontSize = 13,
 			},
 		},
 	}
