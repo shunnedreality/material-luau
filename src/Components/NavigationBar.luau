@@ -27,7 +27,7 @@ local function NavigationBar(
 	assert(5 >= #tabChildren and #tabChildren > 1, "Tabs must be less than or equal to 5 and more than 1.")
 	
 	return scope:New("Frame") {
-		Size = UDim2.new(1, 0, 0, 58),
+		Size = UDim2.new(1, 0, 0, 64),
 		BackgroundColor3 = Tokens.containerColor,
 		BorderSizePixel = 0,
 		
