@@ -26,6 +26,7 @@ nav:
       - Components/TabItem.md
       - Components/TextButton.md
       - Components/Banner.md
+      - Components/Switch.md
   - Utils:
       - Utils/MaterialColorUtilities.md
       - Utils/MaterialTypography.md
