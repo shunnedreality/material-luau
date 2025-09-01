@@ -29,6 +29,8 @@ nav:
       - Components/Switch.md
       - Components/SideSheet.md
       - Components/IconButton.md
+      - Components/Menu.md
+      - Components/Item.md
   - Utils:
       - Utils/MaterialColorUtilities.md
       - Utils/MaterialTypography.md

@@ -10,6 +10,8 @@ local Banner = require("@self/Banner");
 local Switch = require("@self/Switch");
 local SideSheet = require("@self/SideSheet");
 local IconButton = require("@self/IconButton");
+local Menu = require("@self/Menu");
+local Item = require("@self/Item");
 
 return {
     Dialog = Dialog,
@@ -23,5 +25,7 @@ return {
     Banner = Banner,
     Switch = Switch,
     SideSheet = SideSheet,
-    IconButton = IconButton
+    IconButton = IconButton,
+    Menu = Menu,
+    Item = Item
 }
