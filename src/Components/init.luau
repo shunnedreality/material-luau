@@ -12,6 +12,7 @@ local SideSheet = require("@self/SideSheet");
 local IconButton = require("@self/IconButton");
 local Menu = require("@self/Menu");
 local Item = require("@self/Item");
+local Shadow = require("@self/Shadow");
 
 return {
     Dialog = Dialog,
@@ -27,5 +28,6 @@ return {
     SideSheet = SideSheet,
     IconButton = IconButton,
     Menu = Menu,
-    Item = Item
+    Item = Item,
+    Shadow = Shadow
 }
