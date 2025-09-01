@@ -127,7 +127,7 @@ local function startPressAnimation(
 
 	currentAnimation:set(TweenService:Create(
 		surface,
-		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Quint, 
+		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Circular, 
 			Enum.EasingDirection.Out),
 		{
 			Size = UDim2.fromOffset(initialSize * scale, initialSize * scale),
