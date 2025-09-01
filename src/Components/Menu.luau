@@ -8,6 +8,7 @@ local MaterialRoblox = script.Parent.Parent;
 local Fusion = require(MaterialRoblox.Parent.Fusion);
 local MenuTokens = require(MaterialRoblox.Tokens.Menu);
 local showComputed = require(MaterialRoblox.Utils.ShowComputed);
+local Shadow = require(MaterialRoblox.Components.Shadow);
 
 local Children = Fusion.Children;
 local OnEvent = Fusion.OnEvent;
@@ -50,6 +51,7 @@ local function Menu(
     local open = props.open or scope:Value(false);
     local menuPostion = scope:Value(UDim2.fromOffset(0, 0));
     local menuAnchorPoint = scope:Value(Vector2.new(0, 0));
+
     local menuHeight = scope:Computed(function(
         use: Fusion.Use
     )
@@ -61,7 +63,26 @@ local function Menu(
         end
 
         return height + MENU_TOTAL_VERTICAL_PADDING
-    end)
+    end);
+
+    local menuSize = scope:Computed(function(
+        use: Fusion.Use
+    )
+        return UDim2.fromOffset(112, use(menuHeight))
+    end);
+
+    local menuGroupTransparency = scope:Tween(
+        scope:Computed(function(
+            use: Fusion.Use
+        )
+            if use(open) then
+                return 0
+            else
+                return 1
+            end
+        end),
+        TweenInfo.new(.2)
+    );
 
     table.insert(scope, props.attachTo.MouseButton1Click:Connect(function()
         open:set(true);
@@ -85,24 +106,29 @@ local function Menu(
 
         [Children] = {
             showComputed(scope, open, function()
-                return scope:New("ImageButton") {
-                    Modal = true,
-                    BackgroundTransparency = 1,
-                    ImageTransparency = 1,
-                    Size = UDim2.fromScale(1, 1),
+                return {
+                    scope:New("ImageButton") {
+                        Modal = true,
+                        BackgroundTransparency = 1,
+                        ImageTransparency = 1,
+                        Size = UDim2.fromScale(1, 1),
 
-                    [OnEvent "MouseButton1Click"] = function()
-                        open:set(false);
-                    end
+                        [OnEvent "MouseButton1Click"] = function()
+                            open:set(false);
+                        end
+                    },
+
+                    Shadow(scope, {
+                        Size = menuSize,
+                        Position = menuPostion,
+                        AnchorPoint = menuAnchorPoint,
+                        Elevation = 2,
+                    })
                 }
             end),
 
             scope:New("CanvasGroup") {
-                Size = scope:Computed(function(
-                    use: Fusion.Use
-                )
-                    return UDim2.fromOffset(112, use(menuHeight))
-                end),
+                Size = menuSize,
                 Position = menuPostion,
                 BackgroundColor3 = Tokens.containerColor,
                 AutomaticSize = Enum.AutomaticSize.X,
@@ -110,18 +136,7 @@ local function Menu(
                 ZIndex = 2,
                 Visible = open,
 
-                GroupTransparency = scope:Tween(
-                    scope:Computed(function(
-                        use: Fusion.Use
-                    )
-                        if use(open) then
-                            return 0
-                        else
-                            return 1
-                        end
-                    end),
-                    TweenInfo.new(.2)
-                ),
+                GroupTransparency = menuGroupTransparency,
 
                 [Children] = {
                     scope:New("UISizeConstraint") {
