@@ -6,7 +6,6 @@
 local MaterialRoblox = script.Parent.Parent;
 
 local SideSheetTokens = require(MaterialRoblox.Tokens.SideSheet);
-local TextButton = require(MaterialRoblox.Components.TextButton);
 local Fusion = require(MaterialRoblox.Parent.Fusion);
 local showComputed = require(MaterialRoblox.Utils.ShowComputed);
 local IconButton = require(MaterialRoblox.Components.IconButton);
