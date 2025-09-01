@@ -44,6 +44,24 @@ local function TextButton(
 	props.text = props.text or "Hello world!";
 
 	local textChangeCount = scope:Value(0);
+	local isPressed = scope:Value(false);
+	local isHovering = scope:Value(false);
+
+	local cornerRadius = scope:Spring(
+		scope:Computed(function(
+			use: Fusion.Use
+		)
+			if use(isPressed) then
+				return UDim.new(0, 8)
+			elseif use(isHovering) then
+				return UDim.new(0, 12)
+			else
+				return Tokens.shape
+			end
+		end),
+		30,
+		1.5
+	)
 	
 	local width = scope:Computed(function(
 		use: Fusion.Use
@@ -86,14 +104,36 @@ local function TextButton(
 		FontFace = Tokens.labelText.font,
 		
 		[OnEvent "MouseButton1Click"] = props.onClick,
+
+		[OnEvent "InputBegan"] = function(
+			inputObject: InputObject
+		)
+			if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or 
+				inputObject.UserInputType == Enum.UserInputType.Touch then
+				isPressed:set(true);
+			elseif inputObject.UserInputType == Enum.UserInputType.MouseMovement then
+				isHovering:set(true)
+			end
+		end,
+
+		[OnEvent "InputEnded"] = function(
+			inputObject: InputObject
+		)
+			if inputObject.UserInputType == Enum.UserInputType.MouseButton1 or 
+				inputObject.UserInputType == Enum.UserInputType.Touch then
+				isPressed:set(false);
+			elseif inputObject.UserInputType == Enum.UserInputType.MouseMovement then
+				isHovering:set(false);
+			end
+		end,
 		
 		[Children] = {
 			Ripple(scope, {
-				borderRadius = Tokens.shape
+				borderRadius = cornerRadius
 			}),
 			
 			scope:New("UICorner") {
-				CornerRadius = Tokens.shape
+				CornerRadius = cornerRadius
 			},
 			
 			scope:Computed(function(
