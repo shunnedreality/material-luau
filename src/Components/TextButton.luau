@@ -59,7 +59,7 @@ local function TextButton(
 				return Tokens.shape
 			end
 		end),
-		30,
+		25,
 		1.5
 	)
 	

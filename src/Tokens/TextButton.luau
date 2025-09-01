@@ -24,7 +24,7 @@ local function getTokens()
 		height = 40;
 		paddingLeft = 16,
 		paddingRight = 16,
-		shape = UDim.new(1, 0)
+		shape = UDim.new(0, 20)
 	}
 end
 
