@@ -14,3 +14,5 @@ MaterialRoblox.Components.Icon {
     icon = "home"
 }
 ```
+
+[Example code](https://github.com/shunnedreality/material-roblox/tree/main/Examples/example/client.lua)
