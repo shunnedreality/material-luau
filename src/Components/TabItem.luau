@@ -20,7 +20,7 @@ local Out = Fusion.Out;
 local ICON_WIDTH = 24;
 local INITIAL_ANIMATION = TweenInfo.new(
 	0.5,
-	Enum.EasingStyle.Quint,
+	Enum.EasingStyle.Circular,
 	Enum.EasingDirection.InOut
 );
 
