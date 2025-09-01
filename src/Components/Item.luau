@@ -26,9 +26,10 @@ local function Item(
     local Tokens = ItemTokens();
 
     return scope:New("ImageButton") {
-        Size = UDim2.new(1, 0, 0, 48),
+        Size = UDim2.new(0, 0, 0, 48),
         ImageTransparency = 1,
         BackgroundTransparency = 1,
+        AutomaticSize = Enum.AutomaticSize.X,
 
         [OnEvent "MouseButton1Click"] = props.onClick,
 
@@ -40,6 +41,8 @@ local function Item(
             scope:New("Frame") {
                 BackgroundTransparency = 1,
                 Size = UDim2.fromScale(1, 1),
+                AutomaticSize = Enum.AutomaticSize.X,
+
                 [Children] = {
                     scope:New("UIPadding") {
                         PaddingLeft = UDim.new(0, 12),
@@ -62,6 +65,7 @@ local function Item(
                         Size = UDim2.fromScale(0, 1);
                         TextXAlignment = Enum.TextXAlignment.Left,
                         BackgroundTransparency = 1,
+                        AutomaticSize = Enum.AutomaticSize.X,
                         Text = props.label,
                         FontFace = Tokens.labelFont.font,
                         TextSize = Tokens.labelFont.fontSize,

@@ -101,10 +101,11 @@ local function Menu(
                 Size = scope:Computed(function(
                     use: Fusion.Use
                 )
-                    return UDim2.new(1, 0, 0, use(menuHeight))
+                    return UDim2.fromOffset(112, use(menuHeight))
                 end),
                 Position = menuPostion,
                 BackgroundColor3 = Tokens.containerColor,
+                AutomaticSize = Enum.AutomaticSize.X,
                 AnchorPoint = menuAnchorPoint,
                 ZIndex = 2,
                 Visible = open,
@@ -154,7 +155,8 @@ local function Menu(
                     },
 
                     scope:New("UIListLayout") {
-                        SortOrder = Enum.SortOrder.LayoutOrder
+                        SortOrder = Enum.SortOrder.LayoutOrder,
+                        HorizontalFlex = Enum.UIFlexAlignment.Fill,
                     },
 
                     scope:ForValues(props[Children], function(
