@@ -15,4 +15,4 @@ MaterialRoblox.Components.Icon {
 }
 ```
 
-[Example code](https://github.com/shunnedreality/material-roblox/tree/main/Examples/example/client.lua)
+[Example code](https://github.com/shunnedreality/material-roblox/tree/main/Examples/example.client.lua)
