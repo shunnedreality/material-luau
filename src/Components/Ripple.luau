@@ -125,17 +125,21 @@ local function startPressAnimation(
 	surface.Position = UDim2.fromOffset(startPosition.X, startPosition.Y);
 	surface.ImageTransparency = Tokens.pressedTransparency;
 
-	currentAnimation:set(TweenService:Create(
+	local Tween = TweenService:Create(
 		surface,
-		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Circular, 
-			Enum.EasingDirection.Out),
+		--[[TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Circular, 
+			Enum.EasingDirection.Out),]]
+		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Exponential, 
+			Enum.EasingDirection.InOut),
 		{
 			Size = UDim2.fromOffset(initialSize * scale, initialSize * scale),
 			Position = UDim2.fromScale(endPosition.X, endPosition.Y);
 		}
-	));
+	);
 
-	(scope.peek(currentAnimation) :: Tween):Play();
+	Tween:Play();
+
+	currentAnimation:set(Tween);
 end
 
 local function Ripple(

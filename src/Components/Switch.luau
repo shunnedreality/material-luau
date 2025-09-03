@@ -90,8 +90,8 @@ local function Switch(
                             return UDim2.new(0, 16, 0.5, 0)
                         end
                     end),
-                    25,
-                    1
+                    17.32,
+                    0.9
                 ),
                 BackgroundTransparency = scope:Computed(function(
                     use: Fusion.Use
@@ -123,8 +123,8 @@ local function Switch(
                                     return UDim2.fromOffset(Tokens.handleUnselectedSize, Tokens.handleUnselectedSize)
                                 end
                             end),
-                            25,
-                            1
+                            17.32,
+                            0.9
                         ),
                         BackgroundColor3 = scope:Computed(function(
                             use: Fusion.Use
