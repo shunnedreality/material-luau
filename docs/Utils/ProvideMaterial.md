@@ -5,7 +5,7 @@ Provides a MaterialTheme
 ## Example
 ```lua
 local MaterialTheme = {
-    color = MaterialColorUtilities.default:light(Color3.new(...)),
+    color = ColorBuilder(hex, mode),
     typography = MaterialTypography(fontId)
 }
 

@@ -1,9 +1,9 @@
 local MaterialRoblox = script.Parent.Parent;
 
-local MaterialColorUtilities = require(MaterialRoblox.MaterialColorUtilities);
 local MaterialTypography = require(MaterialRoblox.Utils.MaterialTypography);
+local ColorBuilder = require(MaterialRoblox.Utils.ColorBuilder);
 
 return {
-	color = MaterialColorUtilities.default:light(Color3.new(0.258824, 0.521569, 0.956863)),
+	color = ColorBuilder("#4285F4", "light"),
 	typography = MaterialTypography(16658221428)
 }

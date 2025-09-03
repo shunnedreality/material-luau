@@ -1,4 +1,4 @@
-# MaterialColorUtilities
+# ColorBuilder
 
 Provides a [Material Color](https://m3.material.io/styles/color/roles) theme. Refer to M3 guidance for colors
 
@@ -6,11 +6,7 @@ Provides a [Material Color](https://m3.material.io/styles/color/roles) theme. Re
 
 ## Example
 ```lua
---Create a light color scheme: 
-MaterialColorUtilities.default:light(Color3.new(0, 0, 0))
---Create a dark color scheme: 
-MaterialColorUtilities.default:dark(Color3.new(0, 0, 0))
---Create a CustomColorGroup (a scheme extension based on one color): 
-MaterialColorUtilities.CustomColorGroup:light(color3)
-MaterialColorUtilities.CustomColorGroup:dark(color3
+local hex = "#FFFFF";
+local mode: "light" | "dark" = "light";
+ColorBuilder(hex, mode);
 ```
