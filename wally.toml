@@ -1,5 +1,5 @@
 [package]
-name = "shunnedreality/material-roblox"
+name = "shunnedreality/MaterialRoblox"
 description = "Material Design 3 components that actually match Google specs"
 version = "0.9.1"
 realm = "shared"
