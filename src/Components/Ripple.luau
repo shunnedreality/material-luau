@@ -12,7 +12,7 @@ local Fusion = require("../../Fusion");
 local RippleTokens = require(MaterialRoblox.Tokens.Ripple);
 
 local RIPPLE_IMAGE_ID = "rbxassetid://18741562417";
-local PRESS_GROW_MS = .45;
+local PRESS_GROW_MS = .8;
 local MINIMUM_PRESS_MS = .225;
 local INITIAL_ORIGIN_SCALE = 0.2;
 local PADDING = 10;
@@ -130,7 +130,7 @@ local function startPressAnimation(
 		--[[TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Circular, 
 			Enum.EasingDirection.Out),]]
 		TweenInfo.new(PRESS_GROW_MS, Enum.EasingStyle.Exponential, 
-			Enum.EasingDirection.InOut),
+			Enum.EasingDirection.Out),
 		{
 			Size = UDim2.fromOffset(initialSize * scale, initialSize * scale),
 			Position = UDim2.fromScale(endPosition.X, endPosition.Y);
