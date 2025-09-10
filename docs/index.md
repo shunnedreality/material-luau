@@ -1,10 +1,10 @@
-# MaterialRoblox v0.9
+# MaterialLuau v0.9
 
 !!! warning
 
-    This documentation refers to the **latest** version of MaterialRoblox, even pre-releases. Ensure that features exist in your installation of MaterialRoblox.
+    This documentation refers to the **latest** version of MaterialLuau, even pre-releases. Ensure that features exist in your installation of MaterialRoblox.
 
-MaterialRoblox is a Fusion Material Design 3 UI library that actually looks and functions like from Google.
+MaterialLuau is a Fusion Material Design 3 UI library that actually looks and functions like from Google.
 
 **Works with:** Fusion 0.3, only
 
@@ -12,8 +12,8 @@ MaterialRoblox is a Fusion Material Design 3 UI library that actually looks and 
 
 ### Tokens
 
-MaterialRoblox ensures that it is up to Material Design 3 specs by using actual Token values.
+MaterialLuau ensures that it is up to Material Design 3 specs by using actual Token values.
 
 ### Theming
 
-MaterialRoblox allows you to fully customize your Material Design 3 colors and typography using actual JS code from Google.
+MaterialLuau allows you to fully customize your Material Design 3 colors and typography using actual JS code from Google.
